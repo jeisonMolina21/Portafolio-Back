@@ -1,0 +1,49 @@
+{
+  "name": "portfolio-backend",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node lib/helpers.test.mjs",
+    "seed": "node scripts/seed-3-profiles.js"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@vercel/blob": "^0.27.3",
+    "bcryptjs": "^3.0.3",
+    "clsx": "latest",
+    "dotenv": "^17.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "latest",
+    "mysql2": "^3.19.1",
+    "next": "latest",
+    "pdfkit": "^0.19.1",
+    "pg": "^8.23.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "ssh2": "^1.17.0",
+    "tailwind-merge": "latest",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/pdfkit": "^0.17.6",
+    "@types/pg": "^8.23.1",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/uuid": "^10.0.0",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
