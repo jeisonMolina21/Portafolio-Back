@@ -25,6 +25,11 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/lib ./lib
 COPY --from=builder /app/app ./app
+COPY --from=builder /app/controllers ./controllers
+COPY --from=builder /app/models ./models
+COPY --from=builder /app/services ./services
+COPY --from=builder /app/constants ./constants
+COPY --from=builder /app/database ./database
 
 EXPOSE 3000
 CMD ["npm", "run", "start"]

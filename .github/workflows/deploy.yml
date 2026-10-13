@@ -1,0 +1,29 @@
+name: Deploy Portafolio Backend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Despliegue en Homeserver
+    runs-on: self-hosted
+    steps:
+      - name: Actualizar código y reiniciar contenedor
+        run: |
+          echo "=============================================="
+          echo "🚀 Desplegando Portafolio Backend..."
+          echo "=============================================="
+          cd /home/jm/production/portfolio
+          
+          # Actualizar repositorio en backend
+          echo "📥 Descargando últimos cambios de main..."
+          git -C backend pull origin main
+          
+          # Reconstruir contenedor Docker sin afectar otros servicios
+          echo "🐳 Reconstruyendo portfolio_backend_prod..."
+          docker compose up -d --build --no-deps portfolio-backend
+          
+          echo "✅ Despliegue completado con éxito!"
